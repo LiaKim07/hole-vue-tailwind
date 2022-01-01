@@ -4,6 +4,7 @@
       hero
       relative
       overflow-hidden
+      h-screen
       flex
       justify-end
       items-center
@@ -11,11 +12,12 @@
       align-bottom
     "
   >
-    <img src="@/assets/svg/circle_1.svg" class="" alt="" />
+    <!-- <img src="@/assets/svg/circle_1.svg" class="" alt="" />
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
-    <img src="@/assets/svg/logo.svg" alt="" />
-    <div class="mb-24 relative">
+    <img src="@/assets/svg/logo.svg" alt="" /> -->
+    <logo-big />
+    <div class="2xl:mb-24 mb-14 relative">
       <router-link
         class="
           inline-block
@@ -38,7 +40,9 @@
 </template>
 
 <script>
+import logoBig from "../common/logo-big.vue";
 export default {
+  components: { logoBig },
   name: "hero",
   data() {
     return {};
@@ -47,33 +51,36 @@ export default {
 </script>
 
 <style lang="scss">
-.hero {
-  height: 1100px;
-  img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform-origin: left right;
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
 
-    &:first-child {
+  svg {
+    width: 100%;
+    #ring-1 {
       animation: yourAnimation 20s linear 0s infinite reverse none;
+      transform-origin: center center;
     }
-    &:nth-child(2) {
+    #ring-2 {
       animation: yourAnimation 20s linear 0s infinite normal none;
+      transform-origin: center center;
     }
-    &:nth-child(3) {
+    #ring-3 {
       animation: yourAnimation 20s linear 0s infinite normal none;
+      transform-origin: center center;
     }
   }
 }
 
 @keyframes yourAnimation {
   0.0% {
-    transform: translate(-50%, -50%) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 </style>

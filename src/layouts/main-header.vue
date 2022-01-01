@@ -9,15 +9,16 @@
       flex
       justify-center
       items-center
-      pt-16
+      2xl:pt-16
+      pt-10
     "
   >
     <div class="px-2">
-      <router-link class="mx-8" to="#about"> About Us </router-link>
-      <router-link class="mx-8" to="#project"> Project </router-link>
-      <router-link class="mx-8" to="#partner"> Partner </router-link>
-      <router-link class="mx-8" to="#roadMap"> Road Map </router-link>
-      <router-link class="mx-8" to="#contact"> Contact </router-link>
+      <router-link class="md:mx-8 mx-3" to="#about"> About Us </router-link>
+      <router-link class="md:mx-8 mx-3" to="#project"> Project </router-link>
+      <router-link class="md:mx-8 mx-3" to="#partner"> Partner </router-link>
+      <router-link class="md:mx-8 mx-3" to="#roadMap"> Road Map </router-link>
+      <router-link class="md:mx-8 mx-3" to="#contact"> Contact </router-link>
     </div>
   </nav>
 </template>

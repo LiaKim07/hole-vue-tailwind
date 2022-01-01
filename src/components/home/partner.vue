@@ -1,11 +1,14 @@
 <template>
-  <section id="partner" class="bg-color-primary pt-12 pb-56">
+  <section
+    id="partner"
+    class="bg-color-primary pt-12 xl:pb-52 lg:pb-52 md:pb-36 sm:pb-32"
+  >
     <div class="container mx-auto">
       <h1 class="text-5xl font-semibold uppercase mb-24 text-center">
         Partners
       </h1>
 
-      <div class="grid grid-cols-3 gap-14">
+      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-14">
         <template v-for="(i, idx) in 6">
           <div :key="idx" class="text-center">
             <div

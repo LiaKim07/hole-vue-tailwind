@@ -1,6 +1,9 @@
 <template>
-  <section id="about" class="bg-color-primary py-44 relative overflow-hidden">
-    <div class="container mx-auto text-center">
+  <section
+    id="about"
+    class="bg-color-primary md:py-44 py-32 relative overflow-hidden"
+  >
+    <div class="container mx-auto text-center px-3">
       <h1 class="text-5xl font-semibold uppercase mb-16">About Us</h1>
 
       <p class="mb-14 max-w-xl mx-auto">
