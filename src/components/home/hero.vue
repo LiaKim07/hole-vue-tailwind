@@ -3,7 +3,6 @@
     class="
       hero
       relative
-      overflow-hidden
       h-screen
       flex
       justify-end
@@ -18,7 +17,7 @@
     <img src="@/assets/svg/logo.svg" alt="" /> -->
     <logo-big />
     <div class="2xl:mb-24 mb-14 relative">
-      <router-link
+      <button
         class="
           inline-block
           border border-color-dark
@@ -31,10 +30,10 @@
           font-semibold
           z-40
         "
-        to="#about"
+        @click.prevent="scrollDown"
       >
         Scroll down
-      </router-link>
+      </button>
     </div>
   </div>
 </template>
@@ -47,6 +46,12 @@ export default {
   data() {
     return {};
   },
+  methods: {
+    scrollDown() {
+      const el = document.getElementById("about");
+      el.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
 
@@ -57,6 +62,7 @@ export default {
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 
   svg {
     width: 100%;
