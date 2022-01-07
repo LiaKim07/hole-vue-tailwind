@@ -1,10 +1,12 @@
 <template>
   <section id="project" class="bg-color-secondary relative">
-    <h1
-      class="text-5xl font-semibold uppercase text-center pt-12 absolute w-full"
-    >
-      Project
-    </h1>
+    <div>
+      <h1
+        class="text-5xl font-semibold uppercase text-center pt-10 w-full"
+      >
+        Project
+      </h1>
+    </div>
     <div class="flex flex-col md:flex-row items-center justify-around">
       <div class="flex md:pl-6"> 
         <logo-medium :projectJSON="projectJSON" @show-detail="detail"/>

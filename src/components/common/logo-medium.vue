@@ -1,8 +1,8 @@
 <template>
-  <div id="project" class="logo max-w-2xl h-auto">
+  <div id="project" class="logo w-screen max-w-2xl">
     <svg 
-      width="867"
-      height="867"
+      width="100%"
+      height="100%"
       viewBox="0 0 1346 1346"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
