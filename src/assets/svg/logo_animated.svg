@@ -1,8 +1,6 @@
-<template>
-  <div class="logo max-w-2xl">
-    <svg
-      width="580"
-      height="580"
+ <svg
+      width="867"
+      height="867"
       viewBox="0 0 1346 1346"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -20,15 +18,16 @@
           <g id="Frame 9">
             <circle
               id="Ellipse 28"
-              cx="54"
-              cy="936"
+              cx="640"
+              cy="1345"
               r="25.5"
               fill="#E4DACD"
               stroke="black"
               stroke-dasharray="8 8"
             />
-            <circle id="Ellipse 24" cx="54" cy="936" r="13" fill="#272727" />
-            <circle id="Ellipse 29" cx="54" cy="936" r="13" fill="#272727" />
+            <circle id="Ellipse 24" cx="640" cy="1345" r="13" fill="#272727" />
+            <!-- <circle id="Ellipse 29" cx="54" cy="936" r="13" fill="#272727" /> -->
+            <text dx="35%" dy="30%" x="10%" y="75%" stroke="#272727" stroke-width="2px">Project 1</text>
           </g>
           <g id="Frame 18">
             <g id="Frame 12">
@@ -77,6 +76,7 @@
               stroke="#272727"
             />
             <circle id="Ellipse 27" cx="277" cy="887" r="4" fill="#272727" />
+            <text dx="10" dy="20%"  transform="rotate(90,100,100) translate(70 30)" stroke="#272727" stroke-width="2px">Project 1</text>
           </g>
           <g id="Frame 15">
             <circle
@@ -169,14 +169,3 @@
         </g>
       </g>
     </svg>
-  </div>
-</template>
-
-<script>
-export default {
-  name: "logo-big",
-};
-</script>
-
-<style lang="scss">
-</style>

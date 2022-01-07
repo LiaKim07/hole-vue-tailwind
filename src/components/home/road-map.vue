@@ -3,7 +3,8 @@
     <h1
       class="
         text-5xl
-        pt-12
+        lg:pt-12
+        pt-2
         font-semibold
         uppercase
         text-center
@@ -34,14 +35,22 @@
                       v-for="(perk, idx) in stage.perks"
                       :key="idx"
                     >
-                      <div class="mr-4">
-                        <img
+                      <div id="perk" class="lg:mr-4 relative max-h-6 lg:max-h-14 z-30 inline-flex" @mouseover="perk.clicked = true" @mouseleave="perk.clicked = false">
+                        <img  
                           v-if="perk.available"
                           src="@/assets/svg/selected.svg"
                         />
                         <img v-else src="@/assets/svg/unselected.svg" />
+                          <div class="relative" v-cloak v-show="perk.clicked">
+                            <div class="absolute top-0 z-10 w-24 p-2 -mt-1 text-sm text-center leading-tight text-black transform bg-white -translate-x-full -translate-y-full bg-orange-500 rounded-lg shadow-lg">
+                              More info
+                            </div>
+                            <svg fill="white" class="absolute z-10 w-6 h-6 transform -translate-x-7 -translate-y-3 stroke-2" width="8" height="8">
+                              <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
+                            </svg>
+                          </div>
                       </div>
-                      <div class="text-2xl font-semibold">
+                      <div class="lg:text-2xl text-md font-semibold">
                         {{ perk.line1 }} <br />
                         {{ perk.line2 }}
                       </div>
@@ -67,23 +76,22 @@
               </div>
             </swiper-slide>
           </template>
-
-          <div
-            class="swiper-button-prev"
-            slot="button-prev"
-            @click="$refs.mySwiperRef.$swiper.slidePrev()"
-            v-if="settings && settings.navigation"
-          >
-            <img src="@/assets/svg/left_arrow.svg" alt="" />
-          </div>
-          <div
-            class="swiper-button-next"
-            slot="button-next"
-            @click="$refs.mySwiperRef.$swiper.slideNext()"
-            v-if="settings && settings.navigation"
-          >
-            <img src="@/assets/svg/right_arrow.svg" alt="" />
-          </div>
+            <div
+              class="swiper-button-prev"
+              slot="button-prev"
+              @click="$refs.mySwiperRef.$swiper.slidePrev()"
+              v-if="settings && settings.navigation"
+            >
+              <img src="@/assets/svg/left_arrow.svg" alt="" />
+            </div>
+            <div
+              class="swiper-button-next"
+              slot="button-next"
+              @click="$refs.mySwiperRef.$swiper.slideNext()"
+              v-if="settings && settings.navigation"
+            >
+              <img src="@/assets/svg/right_arrow.svg" alt="" />
+            </div>
         </swiper>
       </div>
     </div>
@@ -96,6 +104,7 @@ export default {
 
   data() {
     return {
+      mInfo: false,
       settings: {
         slidesPerView: 1,
         freeMode: false,
@@ -117,21 +126,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: true,
+                  clicked: false,
                 },
               ],
             },
@@ -142,21 +155,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: false,
+                  clicked: false,
                 },
               ],
             },
@@ -167,21 +184,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: false,
+                  clicked: false,
                 },
               ],
             },
@@ -197,21 +218,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: true,
+                  clicked: false,
                 },
               ],
             },
@@ -222,21 +247,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: false,
+                  clicked: false,
                 },
               ],
             },
@@ -247,21 +276,25 @@ export default {
                   line1: "6,000",
                   line2: "Holders",
                   available: true,
+                  clicked: false,
                 },
                 {
                   line1: "Marketing Campaign",
                   line2: "(TikTok Twitter)",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "10,000",
                   line2: "Telegram members",
                   available: false,
+                  clicked: false,
                 },
                 {
                   line1: "Merchant Website",
                   line2: "Integrations ",
                   available: false,
+                  clicked: false,
                 },
               ],
             },
@@ -283,6 +316,9 @@ export default {
 .swiper-button-prev {
   width: 64px !important;
   height: 64px !important;
+}
+#perk:hover{
+  cursor: pointer;
 }
 </style>
 

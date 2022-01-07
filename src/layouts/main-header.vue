@@ -14,11 +14,11 @@
     "
   >
     <div class="px-2">
-      <router-link class="md:mx-8 mx-3" to="#about"> About Us </router-link>
-      <router-link class="md:mx-8 mx-3" to="#project"> Project </router-link>
-      <router-link class="md:mx-8 mx-3" to="#partner"> Partner </router-link>
-      <router-link class="md:mx-8 mx-3" to="#roadMap"> Road Map </router-link>
-      <router-link class="md:mx-8 mx-3" to="#contact"> Contact </router-link>
+      <a class="md:mx-8 mx-3" href="#about"> About Us </a>
+      <a class="md:mx-8 mx-3" href="#project"> Project </a>
+      <a class="md:mx-8 mx-3" href="#partner"> Partner </a>
+      <a class="md:mx-8 mx-3" href="#roadMap"> Road Map </a>
+      <a class="md:mx-8 mx-3" href="#contact"> Contact </a>
     </div>
   </nav>
 </template>

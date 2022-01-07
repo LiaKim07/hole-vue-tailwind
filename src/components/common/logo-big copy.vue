@@ -1,8 +1,8 @@
 <template>
-  <div class="logo max-w-2xl">
+  <div class="logo">
     <svg
-      width="580"
-      height="580"
+      width="1346"
+      height="1346"
       viewBox="0 0 1346 1346"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -14,8 +14,8 @@
             cx="673"
             cy="673"
             r="671"
-            stroke="black"
-            stroke-dasharray="8"
+            stroke="#272727"
+            stroke-width="4"
           />
           <g id="Frame 9">
             <circle
@@ -64,8 +64,7 @@
             cx="673"
             cy="677"
             r="447.5"
-            stroke="black"
-            stroke-dasharray="6"
+            stroke="#272727"
           />
           <g id="Frame 10">
             <circle

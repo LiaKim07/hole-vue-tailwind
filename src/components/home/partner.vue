@@ -1,7 +1,7 @@
 <template>
   <section
     id="partner"
-    class="bg-color-primary pt-12 xl:pb-52 lg:pb-52 md:pb-36 sm:pb-32"
+    class="bg-color-primary pt-12 xl:pb-52 lg:pb-52 md:pb-36 sm:pb-32 pb-10"
   >
     <div class="container mx-auto">
       <h1 class="text-5xl font-semibold uppercase mb-24 text-center">

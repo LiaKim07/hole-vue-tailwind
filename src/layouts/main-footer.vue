@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-color-dark text-color-primary pt-20 pb-52">
+  <footer class="bg-color-dark text-color-primary pt-20 pb-52" id="contact">
     <div class="container mx-auto px-3">
       <div class="grid grid-cols-12 gap-2 max-w-5xl mx-auto">
         <template v-for="(item, idx) in nav">
