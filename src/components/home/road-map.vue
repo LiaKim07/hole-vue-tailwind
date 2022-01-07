@@ -1,22 +1,13 @@
 <template>
   <section id="roadMap" class="bg-color-secondary pb-44 relative">
-    <h1
-      class="
-        text-5xl
-        lg:pt-12
-        pt-2
-        font-semibold
-        uppercase
-        text-center
-        absolute
-        w-full
-        left-0
-        top-0
-      "
-    >
-      RoadMap
-    </h1>
-    <img src="@/assets/svg/section_line.svg" class="mb-10" alt="" />
+    <div class="flex justify-center items-center">
+      <div class="h-full relative z-0"> 
+        <img src="@/assets/svg/section_line.svg" class="mb-10 " alt=""> 
+        <div class="absolute inset-0 flex justify-center items-start z-10">
+          <p class="text-5xl font-semi-bold uppercase lg:pt-24 pt-2">RoadMap</p>
+        </div>
+      </div>
+    </div>
     <div class="container mx-auto">
       <div class="overflow-hidden w-full relative">
         <swiper ref="mySwiper" :options="settings">
@@ -314,11 +305,16 @@ export default {
 
 .swiper-button-next,
 .swiper-button-prev {
+  @media (max-width:641px)  {
+    max-width: 15%;
+  }
   width: 64px !important;
   height: 64px !important;
 }
 #perk:hover{
   cursor: pointer;
 }
+
+
 </style>
 
