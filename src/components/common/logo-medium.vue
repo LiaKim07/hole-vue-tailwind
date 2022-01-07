@@ -1,5 +1,5 @@
 <template>
-  <div id="project" class="logo max-w-xl h-auto">
+  <div id="project" class="logo max-w-2xl h-auto">
     <svg
       width="867"
       height="867"
@@ -13,7 +13,7 @@
             id="Ellipse 22"
             cx="673"
             cy="673"
-            r="671"
+            r="550"
             stroke="black"
             stroke-dasharray="8"
           />
@@ -22,15 +22,15 @@
               class="dot2"
               id="Ellipse 28"
               cx="640"
-              cy="1345"
+              cy="1225"
               r="25.5"
               fill="#E4DACD"
               stroke="black"
               :stroke-dasharray="project == projectJSON[0] ? '0' : '8 8'"
             />
-            <circle class="dot" :style="project == projectJSON[0] ? 'fill:black': ''" id="Ellipse 24" cx="640" cy="1345" r="13"/>
+            <circle class="dot" :style="project == projectJSON[0] ? 'fill:black': ''" id="Ellipse 24" cx="640" cy="1225" r="13"/>
             <!-- <circle id="Ellipse 29" cx="54" cy="936" r="13" fill="#272727" /> -->
-            <text stroke="#272727" x="-630" y="-1258" transform="translate(100,100) rotate(183)" stroke-width="2px">{{projectJSON[0].name}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="-645" y="-1135" transform="translate(100,100) rotate(183)" stroke-width="2px">{{projectJSON[0].name}}</text>
           </g>
           <g id="Frame 18">
             <g id="Frame 12" @click="showDetail(projectJSON[1])">
@@ -38,7 +38,7 @@
               class="dot2"
                 id="Ellipse 28_2"
                 cx="700"
-                cy="2"
+                cy="124"
                 r="25.5"
                 fill="#E4DACD"
                 stroke="#272727"
@@ -49,10 +49,10 @@
                 :style="project == projectJSON[1] ? 'fill:black': ''" 
                 id="Ellipse 24_2"
                 cx="700"
-                cy="2"
+                cy="124"
                 r="13"
                 fill="#272727" />              
-            <text stroke="#272727" x="670" y="-50" stroke-width="2px">{{projectJSON[1].name}}</text>
+            <text id="text2" font-size="1.5em" stroke="#272727" x="655" y="80" stroke-width="2px">{{projectJSON[1].name}}</text>
             </g>
           </g>
         </g>
@@ -61,23 +61,23 @@
             id="Ellipse 23"
             cx="673"
             cy="677"
-            r="487.5"
+            r="437.5"
             stroke="black"
             stroke-dasharray="6"
           />
-          <g id="Frame 10"  @click="showDetail(projectJSON[2])">
+          <g id="Frame 10" @click="showDetail(projectJSON[2])">
             <circle
               class="dot2"
               id="Ellipse 25"
-              cx="234"
-              cy="887"
+              cx="284"
+              cy="877"
               r="13"
               fill="#E4DACD"
               stroke="#272727" 
               :stroke-dasharray="project == projectJSON[2] ? '0' : '4 4'"
             />
-            <circle class="dot" :style="project == projectJSON[2] ? 'fill:black': ''" id="Ellipse 27" cx="234" cy="887" r="5.5" fill="#272727"/>
-            <text stroke="#272727" x="-820" y="-170" transform="translate(100,100) rotate(-110)" stroke-width="2px">{{projectJSON[2].name}}</text>
+            <circle class="dot" :style="project == projectJSON[2] ? 'fill:black': ''" id="Ellipse 27" cx="284" cy="877" r="5.5" fill="#272727"/>
+            <text id="text3" font-size="1.5em" stroke="#272727" x="-833" y="-125" transform="translate(100,100) rotate(-110)" stroke-width="2px">{{projectJSON[2].name}}</text>
           </g>
           <!-- <g id="Frame 15">
             <circle
@@ -94,15 +94,15 @@
             <circle
               class="dot2"
               id="Ellipse 25_3"
-              cx="1155"
+              cx="1105"
               cy="744"
               r="13"
               fill="#E4DACD"
               stroke="#272727"
               :stroke-dasharray="project == projectJSON[3] ? '0' : '4 4'"
             />
-            <circle class="dot" :style="project == projectJSON[3] ? 'fill:black': ''"  id="Ellipse 27_3" cx="1155" cy="744" r="5.5" fill="#272727"/>
-            <text text-anchor="start" dx="425" dy="-1170" :transform="`translate(110, 100) rotate(100)`" stroke="#272727" stroke-width="2px">{{projectJSON[3].name}}</text>
+            <circle class="dot" :style="project == projectJSON[3] ? 'fill:black': ''"  id="Ellipse 27_3" cx="1105" cy="744" r="5.5" fill="#272727"/>
+            <text id="text4" font-size="1.5em" text-anchor="start" dx="420" dy="-1120" :transform="`translate(110, 100) rotate(100)`" stroke="#272727" stroke-width="2px">{{projectJSON[3].name}}</text>
           </g>
         </g>
         <g id="ring-2">
@@ -110,7 +110,7 @@
             id="Ellipse 20"
             cx="673"
             cy="673"
-            r="403.5"
+            r="353.5"
             stroke="black"
             stroke-dasharray="4 4"
           />
@@ -118,29 +118,29 @@
             <circle
               class="dot2"
               id="Ellipse 21"
-              cx="347"
-              cy="435"
+              cx="387"
+              cy="465"
               r="15.5"
               fill="#E3DACD"
               stroke="black"
               :stroke-dasharray="project == projectJSON[4] ? '0' : '2 2'"
             />
-            <circle class="dot" :style="project == projectJSON[4] ? 'fill:black': ''"  id="Ellipse 29_3" cx="347" cy="435" r="7" fill="#272727" />
-            <text stroke="#272727" x="-135" y="370" transform="translate(100,100) rotate(-51)" stroke-width="2px">{{projectJSON[4].name}}</text>
+            <circle class="dot" :style="project == projectJSON[4] ? 'fill:black': ''"  id="Ellipse 29_3" cx="387" cy="465" r="7" fill="#272727" />
+            <text id="text5" font-size="1.5em" stroke="#272727" x="-149" y="422" transform="translate(100,100) rotate(-51)" stroke-width="2px">{{projectJSON[4].name}}</text>
           </g>
           <g id="Frame 14" @click="showDetail(projectJSON[5])">
             <circle
               class="dot2"
               id="Ellipse 21_2"
-              cx="1077"
+              cx="1025"
               cy="645"
               r="15.5"
               fill="#E3DACD"
               stroke="black"
               :stroke-dasharray="project == projectJSON[5] ? '0' : '2 2'"
             />
-            <circle class="dot" :style="project == projectJSON[5] ? 'fill:black': ''" id="Ellipse 29_4" cx="1077" cy="645" r="7" fill="#272727" />
-            <text stroke="#272727" x="515" y="-1010" transform="translate(100,100) rotate(90)" stroke-width="2px">{{projectJSON[5].name}}</text>
+            <circle class="dot" :style="project == projectJSON[5] ? 'fill:black': ''" id="Ellipse 29_4" cx="1025" cy="645" r="7" fill="#272727" />
+            <text id="text6" font-size="1.5em" stroke="#272727" x="500" y="-956" transform="translate(100,100) rotate(90)" stroke-width="2px">{{projectJSON[5].name}}</text>
           </g>
         </g>
         <g id="logo">
@@ -196,7 +196,10 @@ export default {
       this.$emit('show-detail', project);
       this.project = project;
     }
-  }
+  },
+  created(){
+    this.project = this.projectJSON[0];
+  },
 };
 </script>
 
@@ -204,6 +207,9 @@ export default {
 #project.logo{
   position: inherit;
   transform: inherit;
+  #text1:hover, #text2:hover, #text3:hover, #text4:hover, #text5:hover, #text6:hover{
+    font-size:200%;
+  }
 }
 
 #ring-3:hover{
