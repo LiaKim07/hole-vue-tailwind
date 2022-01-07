@@ -1,13 +1,6 @@
 <template>
   <section id="roadMap" class="bg-color-secondary pb-44 relative">
-    <div class="flex justify-center items-center">
-      <div class="h-full relative z-0"> 
-        <img src="@/assets/svg/section_line.svg" class="mb-10 " alt=""> 
-        <div class="absolute inset-0 flex justify-center items-start z-10">
-          <p class="text-5xl font-semi-bold uppercase lg:pt-24 pt-2">RoadMap</p>
-        </div>
-      </div>
-    </div>
+        <logo-road-map class="mb-10 " alt=""/> 
     <div class="container mx-auto">
       <div class="overflow-hidden w-full relative">
         <swiper ref="mySwiper" :options="settings">
@@ -26,20 +19,20 @@
                       v-for="(perk, idx) in stage.perks"
                       :key="idx"
                     >
-                      <div id="perk" class="lg:mr-4 relative max-h-6 lg:max-h-14 z-30 inline-flex" @mouseover="perk.clicked = true" @mouseleave="perk.clicked = false">
+                      <div id="perk" class="lg:mr-4 relative max-h-6 lg:max-h-14 z-30 inline-flex">
                         <img  
                           v-if="perk.available"
                           src="@/assets/svg/selected.svg"
                         />
                         <img v-else src="@/assets/svg/unselected.svg" />
-                          <div class="relative" v-cloak v-show="perk.clicked">
+                          <!-- <div class="relative" v-cloak v-show="perk.clicked">
                             <div class="absolute top-0 z-10 w-24 p-2 -mt-1 text-sm text-center leading-tight text-black transform bg-white -translate-x-full -translate-y-full bg-orange-500 rounded-lg shadow-lg">
                               More info
                             </div>
                             <svg fill="white" class="absolute z-10 w-6 h-6 transform -translate-x-7 -translate-y-3 stroke-2" width="8" height="8">
                               <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
                             </svg>
-                          </div>
+                          </div> -->
                       </div>
                       <div class="lg:text-2xl text-md font-semibold">
                         {{ perk.line1 }} <br />
@@ -90,9 +83,10 @@
 </template>
 
 <script>
+import logoRoadMap from "../common/logo-road-map.vue";
 export default {
   name: "road-map",
-
+  components:{ logoRoadMap },
   data() {
     return {
       mInfo: false,
@@ -310,10 +304,7 @@ export default {
   }
   width: 64px !important;
   height: 64px !important;
-}
-#perk:hover{
-  cursor: pointer;
-}
+} 
 
 
 </style>
