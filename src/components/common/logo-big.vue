@@ -1,8 +1,8 @@
 <template>
   <div class="logo max-w-2xl">
     <svg
-      width="580"
-      height="580"
+      width="600"
+      height="600"
       viewBox="0 0 1346 1346"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -13,28 +13,27 @@
             id="Ellipse 22"
             cx="673"
             cy="673"
-            r="671"
+            r="611"
             stroke="black"
             stroke-dasharray="8"
           />
           <g id="Frame 9">
             <circle
               id="Ellipse 28"
-              cx="54"
+              cx="123"
               cy="936"
               r="25.5"
               fill="#E4DACD"
               stroke="black"
               stroke-dasharray="8 8"
             />
-            <circle id="Ellipse 24" cx="54" cy="936" r="13" fill="#272727" />
-            <circle id="Ellipse 29" cx="54" cy="936" r="13" fill="#272727" />
+            <circle id="Ellipse 24" cx="123" cy="936" r="13" fill="#272727" /> 
           </g>
           <g id="Frame 18">
             <g id="Frame 12">
               <circle
                 id="Ellipse 28_2"
-                cx="1236"
+                cx="1166"
                 cy="311"
                 r="25.5"
                 fill="#E4DACD"
@@ -43,18 +42,11 @@
               />
               <circle
                 id="Ellipse 24_2"
-                cx="1236"
+                cx="1166"
                 cy="311"
                 r="13"
                 fill="#272727"
-              />
-              <circle
-                id="Ellipse 29_2"
-                cx="1236"
-                cy="311"
-                r="13"
-                fill="#272727"
-              />
+              /> 
             </g>
           </g>
         </g>

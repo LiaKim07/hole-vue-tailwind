@@ -1,6 +1,6 @@
 <template>
   <div id="project" class="logo max-w-2xl h-auto">
-    <svg
+    <svg 
       width="867"
       height="867"
       viewBox="0 0 1346 1346"
@@ -28,8 +28,7 @@
               stroke="black"
               :stroke-dasharray="project == projectJSON[0] ? '0' : '8 8'"
             />
-            <circle class="dot" :style="project == projectJSON[0] ? 'fill:black': ''" id="Ellipse 24" cx="640" cy="1225" r="13"/>
-            <!-- <circle id="Ellipse 29" cx="54" cy="936" r="13" fill="#272727" /> -->
+            <circle class="dot" :style="project == projectJSON[0] ? 'fill:black': ''" id="Ellipse 24" cx="640" cy="1225" r="13"/> 
             <text id="text1" font-size="1.5em" stroke="#272727" x="-645" y="-1135" transform="translate(100,100) rotate(183)" stroke-width="2px">{{projectJSON[0].name}}</text>
           </g>
           <g id="Frame 18">
@@ -78,18 +77,7 @@
             />
             <circle class="dot" :style="project == projectJSON[2] ? 'fill:black': ''" id="Ellipse 27" cx="284" cy="877" r="5.5" fill="#272727"/>
             <text id="text3" font-size="1.5em" stroke="#272727" x="-833" y="-125" transform="translate(100,100) rotate(-110)" stroke-width="2px">{{projectJSON[2].name}}</text>
-          </g>
-          <!-- <g id="Frame 15">
-            <circle
-              id="Ellipse 25_2"
-              cx="660"
-              cy="229"
-              r="8.5"
-              fill="#E4DACD"
-              stroke="#272727"
-            />
-            <circle id="Ellipse 27_2" cx="660" cy="229" r="4" fill="#272727" />
-          </g> -->
+          </g> 
           <g id="Frame 11" @click="showDetail(projectJSON[3])">
             <circle
               class="dot2"
@@ -176,11 +164,11 @@
           />
         </g>
       </g>
-    </svg> 
+    </svg>  
   </div>
 </template>
 
-<script>
+<script> 
 export default {
   name: 'logo-medium',
   props:{
@@ -209,6 +197,7 @@ export default {
   transform: inherit;
   #text1:hover, #text2:hover, #text3:hover, #text4:hover, #text5:hover, #text6:hover{
     font-size:200%;
+    cursor: pointer;
   }
 }
 
