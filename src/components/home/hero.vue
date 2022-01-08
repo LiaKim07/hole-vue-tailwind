@@ -5,6 +5,7 @@
       relative
       h-screen
       flex
+      py-6
       justify-end
       items-center
       flex-col
@@ -15,8 +16,10 @@
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
     <img src="@/assets/svg/logo.svg" alt="" /> --> 
+    <div class="flex w-full h-full items-center md:w-5/12">
       <logo-big/> 
-    <div class="mb-12 relative">
+    </div>
+    <div class="relative">
       <button
         class="
           inline-block
@@ -56,38 +59,38 @@ export default {
 </script>
 
 <style lang="scss">
-.logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
+// .logo {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   width: 100%;
+//   transform: translate(-50%, -50%);
+//   z-index: 2;
 
-  svg {
-    width: 100%;
-    #ring-1 {
-      animation: yourAnimation 20s linear 0s infinite reverse none;
-      transform-origin: center center;
-    }
-    #ring-2 {
-      animation: yourAnimation 20s linear 0s infinite normal none;
-      transform-origin: center center;
-    }
-    #ring-3 {
-      animation: yourAnimation 20s linear 0s infinite normal none;
-      transform-origin: center center;
-    }
-  }
-}
+//   svg {
+//     width: 100%;
+//     #ring-1 {
+//       animation: yourAnimation 20s linear 0s infinite reverse none;
+//       transform-origin: center center;
+//     }
+//     #ring-2 {
+//       animation: yourAnimation 20s linear 0s infinite normal none;
+//       transform-origin: center center;
+//     }
+//     #ring-3 {
+//       animation: yourAnimation 20s linear 0s infinite normal none;
+//       transform-origin: center center;
+//     }
+//   }
+// }
 
-@keyframes yourAnimation {
-  0.0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// @keyframes yourAnimation {
+//   0.0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
 </style>
 

@@ -8,7 +8,6 @@
       xmlns="http://www.w3.org/2000/svg"
     >
       <g id="main-logo" transform="translate(673, 673)"> 
-        
         <g id="ring-3" :transform="rotationRing1">
           <circle
             id="Ellipse 22"
