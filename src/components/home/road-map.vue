@@ -13,33 +13,36 @@
                   <h3 class="text-3xl font-semibold uppercase mb-4 text-center">
                     {{ stage.title }}
                   </h3>
-                  <ul>
-                    <li
-                      class="mb-4 flex items-center"
-                      v-for="(perk, idx) in stage.perks"
-                      :key="idx"
-                    >
-                      <div id="perk" class="lg:mr-4 relative max-h-6 lg:max-h-14 z-30 inline-flex">
-                        <img  
-                          v-if="perk.available"
-                          src="@/assets/svg/selected.svg"
-                        />
-                        <img v-else src="@/assets/svg/unselected.svg" />
-                          <!-- <div class="relative" v-cloak v-show="perk.clicked">
-                            <div class="absolute top-0 z-10 w-24 p-2 -mt-1 text-sm text-center leading-tight text-black transform bg-white -translate-x-full -translate-y-full bg-orange-500 rounded-lg shadow-lg">
-                              More info
-                            </div>
-                            <svg fill="white" class="absolute z-10 w-6 h-6 transform -translate-x-7 -translate-y-3 stroke-2" width="8" height="8">
-                              <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />
-                            </svg>
-                          </div> -->
-                      </div>
-                      <div class="lg:text-2xl text-md font-semibold">
-                        {{ perk.line1 }} <br />
-                        {{ perk.line2 }}
-                      </div>
-                    </li>
-                  </ul>
+                  <p>
+                    {{stage.description}}
+                  </p>
+<!--                  <ul>-->
+<!--                    <li-->
+<!--                      class="mb-4 flex items-center"-->
+<!--                      v-for="(perk, idx) in stage.perks"-->
+<!--                      :key="idx"-->
+<!--                    >-->
+<!--                      <div id="perk" class="lg:mr-4 relative max-h-6 lg:max-h-14 z-30 inline-flex">-->
+<!--                        <img  -->
+<!--                          v-if="perk.available"-->
+<!--                          src=""-->
+<!--                        />-->
+<!--                        <img v-else src="@/assets/svg/unselected.svg" />-->
+<!--                          &lt;!&ndash; <div class="relative" v-cloak v-show="perk.clicked">-->
+<!--                            <div class="absolute top-0 z-10 w-24 p-2 -mt-1 text-sm text-center leading-tight text-black transform bg-white -translate-x-full -translate-y-full bg-orange-500 rounded-lg shadow-lg">-->
+<!--                              More info-->
+<!--                            </div>-->
+<!--                            <svg fill="white" class="absolute z-10 w-6 h-6 transform -translate-x-7 -translate-y-3 stroke-2" width="8" height="8">-->
+<!--                              <rect x="12" y="-10" width="8" height="8" transform="rotate(45)" />-->
+<!--                            </svg>-->
+<!--                          </div> &ndash;&gt;-->
+<!--                      </div>-->
+<!--                      <div class="lg:text-2xl text-md font-semibold">-->
+<!--                        {{ perk.line1 }} <br />-->
+<!--                        {{ perk.line2 }}-->
+<!--                      </div>-->
+<!--                    </li>-->
+<!--                  </ul>-->
                 </div>
                 <div class="w-full text-center mt-2">
                   <div
@@ -103,7 +106,8 @@ export default {
       roadMap: [
         {
           daysLeft: 15,
-          stages: [
+          stages: []
+          /*stages: [
             {
               title: "Stage 1",
               perks: [
@@ -191,99 +195,7 @@ export default {
                 },
               ],
             },
-          ],
-        },
-        {
-          daysLeft: 23,
-          stages: [
-            {
-              title: "Stage 1",
-              perks: [
-                {
-                  line1: "6,000",
-                  line2: "Holders",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "Marketing Campaign",
-                  line2: "(TikTok Twitter)",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "10,000",
-                  line2: "Telegram members",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "Merchant Website",
-                  line2: "Integrations ",
-                  available: true,
-                  clicked: false,
-                },
-              ],
-            },
-            {
-              title: "Stage 2",
-              perks: [
-                {
-                  line1: "6,000",
-                  line2: "Holders",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "Marketing Campaign",
-                  line2: "(TikTok Twitter)",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "10,000",
-                  line2: "Telegram members",
-                  available: false,
-                  clicked: false,
-                },
-                {
-                  line1: "Merchant Website",
-                  line2: "Integrations ",
-                  available: false,
-                  clicked: false,
-                },
-              ],
-            },
-            {
-              title: "Stage 3",
-              perks: [
-                {
-                  line1: "6,000",
-                  line2: "Holders",
-                  available: true,
-                  clicked: false,
-                },
-                {
-                  line1: "Marketing Campaign",
-                  line2: "(TikTok Twitter)",
-                  available: false,
-                  clicked: false,
-                },
-                {
-                  line1: "10,000",
-                  line2: "Telegram members",
-                  available: false,
-                  clicked: false,
-                },
-                {
-                  line1: "Merchant Website",
-                  line2: "Integrations ",
-                  available: false,
-                  clicked: false,
-                },
-              ],
-            },
-          ],
+          ],*/
         },
       ],
     };
@@ -291,10 +203,10 @@ export default {
   async mounted() {
 
     // eslint-disable-next-line no-unused-vars
-    let info = this.data
+    let info = this
     let mountTrue
     mountTrue = await new XMLHttpRequest();
-    mountTrue.open("get" , "https://dyn.trigan.org/api/teammember/getAll?apiKey=ABC123");
+    mountTrue.open("get" , "https://dyn.trigan.org/api/milestone/getAll?apiKey=ABC123");
     mountTrue.setRequestHeader("Accept", "application/json");
     mountTrue.setRequestHeader(
         "Content-type",
@@ -305,7 +217,8 @@ export default {
       if (mountTrue.readyState === XMLHttpRequest.DONE) {
         // eslint-disable-next-line no-unused-vars
         let response = JSON.parse(mountTrue.response)
-        info.data = response.Data
+        console.log(response)
+        info.roadMap[0].stages = response.Data
       }
     }
   }
