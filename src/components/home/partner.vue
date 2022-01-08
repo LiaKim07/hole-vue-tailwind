@@ -8,7 +8,7 @@
         Partners
       </h1>
 
-      <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-14">
+      <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-14">
         <template v-for="val in response">
           <div :key="val" class="text-center">
             <div
@@ -29,7 +29,11 @@
                   alt=""
               />
             </div>
-            <h4 class="text-color-dark text-2xl font-medium mt-10">{{val.backgroundInformation}}</h4>
+            <h4 class="text-color-dark text-2xl font-medium mt-5 bold">{{val.name}}</h4>
+            <h4 class="text-color-dark text-2xl font-medium mt-5 bold">{{val.title}}</h4>
+            <h4 class="text-color-dark text-xl font-medium mt-4">{{val.shortDescription}}</h4>
+            <h4 class="text-color-dark text-m font-medium mt-2"><a :href="val.socialLinks.facebook">Facebook</a> - <a :href="val.socialLinks.instagram">Instagram</a></h4>
+
           </div>
         </template>
       </div>
