@@ -14,9 +14,9 @@
     <!-- <img src="@/assets/svg/circle_1.svg" class="" alt="" />
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
-    <img src="@/assets/svg/logo.svg" alt="" /> -->
-    <logo-big />
-    <div class="2xl:mb-24 mb-14 relative">
+    <img src="@/assets/svg/logo.svg" alt="" /> --> 
+      <logo-big/> 
+    <div class="mb-12 relative">
       <button
         class="
           inline-block

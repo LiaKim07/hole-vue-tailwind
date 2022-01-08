@@ -5,6 +5,11 @@ module.exports = {
       'color-primary': '#DED3C2',
       'color-secondary': '#D6C9B8',
       'color-dark': '#272727',
+      'transparent': 'transparent',
+      'black': '#22292f',
+      'white': '#ffffff',
+      'grey': '#b8c2cc',
+      'grey-light': '#dae1e7',
     },
     fontFamily: {
       sans: ['Sarabun', 'sans-serif'],
