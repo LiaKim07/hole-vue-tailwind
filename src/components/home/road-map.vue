@@ -288,6 +288,27 @@ export default {
       ],
     };
   },
+  async mounted() {
+
+    // eslint-disable-next-line no-unused-vars
+    let info = this.data
+    let mountTrue
+    mountTrue = await new XMLHttpRequest();
+    mountTrue.open("get" , "https://dyn.trigan.org/api/teammember/getAll?apiKey=ABC123");
+    mountTrue.setRequestHeader("Accept", "application/json");
+    mountTrue.setRequestHeader(
+        "Content-type",
+        "application/x-www-form-urlencoded"
+    )
+    mountTrue.send();
+    mountTrue.onreadystatechange = function () {
+      if (mountTrue.readyState === XMLHttpRequest.DONE) {
+        // eslint-disable-next-line no-unused-vars
+        let response = JSON.parse(mountTrue.response)
+        info.data = response.Data
+      }
+    }
+  }
 };
 </script>
 

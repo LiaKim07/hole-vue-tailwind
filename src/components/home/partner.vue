@@ -9,14 +9,14 @@
       </h1>
 
       <div class="grid md:grid-cols-3 sm:grid-cols-2 gap-14">
-        <template v-for="val in data">
+        <template v-for="val in response">
           <div :key="val" class="text-center">
             <div
                 class="mx-auto overflow-hidden rounded-full relative"
                 style="max-width: 192px; height: 192px"
             >
               <img
-                  :src="val[0].image"
+                  :src="val.image"
                   class="
                   w-full
                   h-full
@@ -29,7 +29,7 @@
                   alt=""
               />
             </div>
-            <h4 class="text-color-dark text-2xl font-medium mt-10">{{val[0].backgroundInformation}}</h4>
+            <h4 class="text-color-dark text-2xl font-medium mt-10">{{val.backgroundInformation}}</h4>
           </div>
         </template>
       </div>
@@ -42,13 +42,13 @@ export default {
   name: "partner",
   data() {
     return {
-      data: {}
+      response: {}
     };
   },
-  async mounted() {
+  async created() {
 
     // eslint-disable-next-line no-unused-vars
-    let info = this.data
+    let info = this
     let mountTrue
     mountTrue = await new XMLHttpRequest();
     mountTrue.open("get" , "https://dyn.trigan.org/api/teammember/getAll?apiKey=ABC123");
@@ -62,12 +62,7 @@ export default {
       if (mountTrue.readyState === XMLHttpRequest.DONE) {
         // eslint-disable-next-line no-unused-vars
         let response = JSON.parse(mountTrue.response)
-        info.data = response.Data
-
-
-        console.log(info.data)
-
-
+        info.response = response.Data
       }
     }
   }
