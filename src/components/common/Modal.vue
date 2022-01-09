@@ -7,10 +7,10 @@
                         <slot name="header"></slot>
                         <button class="button ml-auto" @click="closeModal">X</button>
                     </div>
-                    <div class="modal-body py-6">
+                    <div class="modal-body py-6 pr-8">
                         <slot name="body"></slot>
                     </div>
-                    <div class="modal-footer">
+                    <div class="modal-footer px-8">
                         <slot name="footer">
                         </slot>
                     </div>
@@ -29,13 +29,10 @@ export default {
         isModalOpen: false
       }
   },
-  created: function() {
-    this.closeModal();
-  },
   methods: {
     closeModal: function() {
-      console.log(this.id);
-      this.isModalOpen = false;
+        this.openedModal = null
+        this.isModalOpen = false;
     },
     openModal: () => {
         this.isModalOpen = true;

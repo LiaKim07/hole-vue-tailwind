@@ -88,7 +88,9 @@ export default {
       this.openedModal = index
     },
     hideModal() {
+      console.log(this)
       this.openedModal = null
+      this.$emit('closeModal')
     }
   },
   async created() {
