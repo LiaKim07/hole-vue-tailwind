@@ -35,7 +35,7 @@
             <ul class="text-color-dark text-xl font-medium mt-2 flex">
               <a class="p-2 ml-auto" :href="val.socialLinks.facebook"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
               <a class="p-2" :href="val.socialLinks.instagram"><font-awesome-icon :icon="['fab', 'instagram-square']" /></a>
-              <a class="p-2 mr-auto" :href="val.socialLinks.instagram"><font-awesome-icon :icon="['fab', 'youtube-square']" /></a>
+              <a class="p-2 mr-auto" :href="val.socialLinks.youtube"><font-awesome-icon :icon="['fab', 'youtube-square']" /></a>
             </ul>
             <Modal :id="index" v-show="openedModal === index" @close="hideModal()">
               <template v-slot:header>
