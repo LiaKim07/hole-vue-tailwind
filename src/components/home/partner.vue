@@ -32,8 +32,10 @@
             <h4 class="text-color-dark text-2xl font-medium mt-5 bold">{{val.name}}</h4>
             <h4 class="text-color-dark text-2xl font-medium mt-5 bold">{{val.title}}</h4>
             <h4 class="text-color-dark text-xl font-medium mt-4">{{val.shortDescription}}</h4>
-            <h4 class="text-color-dark text-m font-medium mt-2"><a :href="val.socialLinks.facebook">Facebook</a> - <a :href="val.socialLinks.instagram">Instagram</a></h4>
-            <Modal :id="index" v-show="openedModal === index" @close="openModal = null">
+            <h4 class="text-color-dark text-xl font-medium mt-2 flex">
+              <a class="p-2 ml-auto" :href="val.socialLinks.facebook"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a>
+              <a class="p-2 mr-auto ml-1" :href="val.socialLinks.instagram"><font-awesome-icon :icon="['fab', 'instagram-square']" /></a></h4>
+            <Modal :id="index" v-show="openedModal === index" @close="hideModal()">
               <template v-slot:header>
                 <h1 class="text-xl">{{val.name}}</h1>
               </template>
@@ -83,8 +85,10 @@ export default {
   },
   methods: {
     showModal(index) {
-      console.log(index)
       this.openedModal = index
+    },
+    hideModal() {
+      this.openedModal = null
     }
   },
   async created() {
