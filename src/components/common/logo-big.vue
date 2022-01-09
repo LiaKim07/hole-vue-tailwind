@@ -40,7 +40,7 @@
         </g>
         
         <g id="logo" transform="translate(-673, -673)">
-          <image v-show="!raw" style="cursor:pointer"
+          <image  style="cursor:pointer"
           x="440"
           y="440"
         href="trigan_logo_animation.svg"

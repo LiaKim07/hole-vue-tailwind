@@ -5,12 +5,12 @@
   >
     <div class="container mx-auto">
       <h1 class="text-5xl font-semibold uppercase mb-24 text-center">
-        Partners
+        Team
       </h1>
 
       <div class="grid md:grid-cols-4 sm:grid-cols-2 gap-14">
-        <template v-for="val in response">
-          <div :key="val" class="text-center">
+        <template v-for="(val, index) in response">
+          <div :key="index" class="text-center" @click="showModal(index)">
             <div
                 class="mx-auto overflow-hidden rounded-full relative"
                 style="max-width: 192px; height: 192px"
@@ -33,7 +33,36 @@
             <h4 class="text-color-dark text-2xl font-medium mt-5 bold">{{val.title}}</h4>
             <h4 class="text-color-dark text-xl font-medium mt-4">{{val.shortDescription}}</h4>
             <h4 class="text-color-dark text-m font-medium mt-2"><a :href="val.socialLinks.facebook">Facebook</a> - <a :href="val.socialLinks.instagram">Instagram</a></h4>
-
+            <Modal :id="index" v-show="openedModal === index" @close="openModal = null">
+              <template v-slot:header>
+                <h1 class="text-xl">{{val.name}}</h1>
+              </template>
+              <template v-slot:body>
+                <div class="grid sm:grid-cols-2 gap-14">
+                      <div
+                        class="mx-auto overflow-hidden rounded-full relative"
+                        style="max-width: 192px; height: 192px"
+                      >
+                        <img
+                            :src="val.image"
+                            class="object-cover w-full h-full"
+                        />
+                    </div>
+                    <div class="text-left">
+                      <h2>{{val.title}}</h2>
+                      <p>
+                        {{val.longDescription}}
+                      </p>
+                    </div>
+                </div>
+              </template>
+              <template v-slot:footer>
+                <ul class="flex align-center justify-end">
+                  <li><h4 class="text-color-dark text-m font-medium mt-2 ml-auto mr-4"><a :href="val.socialLinks.facebook"><font-awesome-icon :icon="['fab', 'facebook-square']" /></a></h4></li>
+                  <li><h4 class="text-color-dark text-m font-medium mt-2"><a :href="val.socialLinks.instagram"><font-awesome-icon :icon="['fab', 'instagram-square']" /></a></h4></li>
+                </ul>
+              </template>
+            </Modal>
           </div>
         </template>
       </div>
@@ -42,12 +71,21 @@
 </template>
 
 <script>
+import Modal from '../common/Modal.vue'
 export default {
   name: "partner",
+  components: {Modal},
   data() {
     return {
-      response: {}
+      response: {},
+      openedModal: null
     };
+  },
+  methods: {
+    showModal(index) {
+      console.log(index)
+      this.openedModal = index
+    }
   },
   async created() {
 
