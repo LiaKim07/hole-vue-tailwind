@@ -7,10 +7,11 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faFacebookSquare,
   faInstagramSquare,
+  faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faFacebookSquare, faInstagramSquare);
+library.add(faFacebookSquare, faInstagramSquare, faYoutubeSquare);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
