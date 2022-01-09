@@ -1,11 +1,11 @@
 <template>
     <transition name="modal">
-        <div id:this.props.id class="modal-mask">
+        <div v-show="isModalOpen!==false" class="modal-mask">
             <div class="modal-wrapper">
                 <div class="modal-container">
                     <div class="modal-header flex">
                         <slot name="header"></slot>
-                        <button class="button ml-auto" @click="closeModal">X</button>
+                        <button class="button ml-auto bg-black rounded px-3 py-2 text-white" @click="closeModal()">X</button>
                     </div>
                     <div class="modal-body py-6 pr-8">
                         <slot name="body"></slot>
@@ -23,20 +23,18 @@
 <script>
 export default {
   name: "Modal",
-  props: ['id', 'title'],
-  data() {
+  props: ['id', 'title', 'openedModal'],
+  data () {
       return {
-        isModalOpen: false
+          isModalOpen: this.openedModal
       }
   },
+  computed: {
+  },
   methods: {
-    closeModal: function() {
-        this.openedModal = null
-        this.isModalOpen = false;
-    },
-    openModal: () => {
-        this.isModalOpen = true;
-    }
+      closeModal() {
+          this.isModalOpen = false
+      }
   }
 }
 </script>

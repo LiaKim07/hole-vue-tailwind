@@ -37,7 +37,7 @@
               <a class="p-2" :href="val.socialLinks.instagram"><font-awesome-icon :icon="['fab', 'instagram-square']" /></a>
               <a class="p-2 mr-auto" :href="val.socialLinks.youtube"><font-awesome-icon :icon="['fab', 'youtube-square']" /></a>
             </ul>
-            <Modal :id="index" v-show="openedModal === index" @close="hideModal()">
+            <Modal :id="index" v-show="openedModal === index" @close="openedModal=false" :openedModal="openedModal">
               <template v-slot:header>
                 <h1 class="text-xl">{{val.name}}</h1>
               </template>
@@ -91,8 +91,6 @@ export default {
       this.openedModal = index
     },
     hideModal() {
-      console.log(this)
-      this.openedModal = null
       this.$emit('closeModal')
     }
   },
