@@ -16,11 +16,39 @@
             <div class="mx-auto">
               <img
                 :src="val.image"
-                class="h-48 w-48 hover:cursor-pointer rounded-full"
+                class="h-48 w-48 mx-auto hover:cursor-pointer rounded-full"
                 alt=""
               />
             </div>
-            {{ val }}
+            <div>
+              <h4 class="text-color-dark text-2xl font-bold mt-4">
+                {{ val.name }}
+              </h4>
+              <h4 class="text-color-dark text-lg font-medium mt-2">
+                {{ val.title }}
+              </h4>
+              <h4 class="text-color-dark text-sm">
+                {{ val.shortDescription }}
+              </h4>
+              <ul class="text-color-dark text-xl font-medium mt-2 flex">
+                <a class="p-2 ml-auto" :href="val.socialLinks.facebook"
+                  ><font-awesome-icon :icon="['fab', 'facebook-square']"
+                /></a>
+                <a class="p-2" :href="val.socialLinks.instagram"
+                  ><font-awesome-icon :icon="['fab', 'instagram-square']"
+                /></a>
+                <a class="p-2 mr-auto" :href="val.socialLinks.youtube"
+                  ><font-awesome-icon :icon="['fab', 'youtube-square']"
+                /></a>
+              </ul>
+            </div>
+
+            <div
+              v-if="index === openedModal"
+              class="absolute mt-56 z-40 top-0 border left-0 w-full p-4 h-72 rounded-xl bg-color-primary shadow"
+            >
+              tes
+            </div>
           </div>
         </template>
       </div>
