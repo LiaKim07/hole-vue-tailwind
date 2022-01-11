@@ -58,7 +58,7 @@
               </svg>
 
               <div
-                class="flex border-b mt-6 pb-4 border-color-primary inline-block gap-2"
+                class="flex mt-6 pb-4 border-color-primary inline-block gap-4"
               >
                 <img
                   :src="val.image"
@@ -84,18 +84,33 @@
                   </div>
                 </div>
               </div>
-              <p class="text-left text-sm mt-4">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Numquam officiis error placeat cupiditate ab consectetur unde
-                voluptatibus, debitis minima ratione recusandae corporis
-                consequuntur eius labore. Enim inventore reprehenderit
-                temporibus quas.
-                <br />
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Numquam officiis error placeat cupiditate ab consectetur unde
-                voluptatibus, debitis minima ratione recusandae corporis
-                consequuntur eius labore. Enim inventore reprehenderit
-                temporibus quas.
+              <div class="flex inline-block gap-2 border-b border-color-dark">
+                <div
+                  @click.prevent="isActive = 'bio'"
+                  :class="
+                    isActive === 'bio'
+                      ? 'font-bold p-2 rounded-t-lg bg-color-dark text-white'
+                      : 'p-2 '
+                  "
+                >
+                  Biography
+                </div>
+                <div
+                  @click.prevent="isActive = 'someData'"
+                  :class="
+                    isActive === 'someData'
+                      ? 'font-bold p-2 rounded-t-lg bg-color-dark text-white'
+                      : 'p-2 '
+                  "
+                >
+                  Some Data
+                </div>
+              </div>
+              <p class="text-left text-sm mt-4" v-if="isActive === 'bio'">
+                {{ shown }}
+              </p>
+              <p class="text-left text-sm mt-4" v-if="isActive === 'someData'">
+                {{ text }}
               </p>
             </div>
           </div>
@@ -114,6 +129,19 @@ export default {
     return {
       response: {},
       openedModal: 1,
+      text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Numquam officiis error placeat cupiditate ab consectetur unde
+                voluptatibus, debitis minima ratione recusandae corporis
+                consequuntur eius labore. Enim inventore reprehenderit
+                temporibus quas.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Numquam officiis error placeat cupiditate ab consectetur unde
+                voluptatibus, debitis minima ratione recusandae corporis
+                consequuntur eius labore. Enim inventore reprehenderit
+                temporibus quas.`,
+      shown: `Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Numquam officiis error placeat cupiditate ab `,
+      isActive: "bio",
     };
   },
   methods: {
