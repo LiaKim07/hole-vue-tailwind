@@ -1,32 +1,58 @@
 <template>
-
-  <div id="hero" class="logo w-full">
-    <div class="relative z-0">
-    <div id="animate" class="bg-opacity-25 flex justify-center items-center">
-     <logo-animate/>  
-    </div>
-      <div class="z-1000">
-        <svg
-          width="100%"
-          height="100%"
-          viewBox="0 0 1346 1346"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g id="main-logo" transform="translate(673, 673)"> 
-            <g id="ring-3" :transform="rotationRing1">
-              <circle
-                id="Ellipse 22"
-                cx="0"
-                cy="0"
-                r="550"
-                stroke="black"
-                stroke-dasharray="8"
-              />
-            </g>
-            <g id="ring-1" :transform="rotationRing2">
-              <circle
-                id="Ellipse 23"
+  <div id="hero" class=" logo w-full">
+    <svg
+      width="100%"
+      height="100%"
+      viewBox="0 0 1346 1346"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="main-logo" transform="translate(673, 673)"> 
+        <g id="ring-3" :transform="rotationRing1">
+          <circle
+            id="Ellipse 22"
+            cx="0"
+            cy="0"
+            r="550"
+            stroke="black"
+            stroke-dasharray="8"
+          />
+        </g>
+        <g id="ring-1" :transform="rotationRing2">
+          <circle
+            id="Ellipse 23"
+            cx="0"
+            cy="0"
+            r="437.5"
+            stroke="black"
+            stroke-dasharray="6"
+          />
+        </g>
+        <g id="ring-2" :transform="rotationRing3">>
+          <circle
+            id="Ellipse 20"
+            cx="0"
+            cy="0"
+            r="353.5"
+            stroke="black"
+            stroke-dasharray="4 4"
+          />
+        </g>
+        
+        <g id="logo" transform="translate(-673, -673)">
+          <image  style="cursor:pointer"
+          x="440"
+          y="440"
+        href="trigan_logo_animation.svg"
+        alt="triangle with all three sides equal"
+        height="35%"
+        width="35%" />
+        </g>
+        <g id="circle_1" @mouseleave="hoverRing1= false" :transform="trans1" @mouseover="hoverRing1= true" style="cursor:pointer">
+          <a href="#about">
+            <circle
+                class="dot2"
+                id="Ellipse 28"
                 cx="0"
                 cy="0"
                 r="437.5"
