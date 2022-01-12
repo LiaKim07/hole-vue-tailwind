@@ -55,87 +55,124 @@
                 id="Ellipse 28"
                 cx="0"
                 cy="0"
-                r="25.5"
-                fill="#E4DACD"
+                r="437.5"
                 stroke="black"
-                stroke-dasharray="8 8"
+                stroke-dasharray="6"
               />
-            <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .About Us`}}</text>
-          </a>
-        </g>
-        <g id="circle_2" @mouseleave="hoverRing1= false" @mouseover="hoverRing1= true" :transform="trans2" style="cursor:pointer">
-          <a href="#project">
-            <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="25.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="8 8"
-            />
-            <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Project`}}</text>
-          </a>
-        </g>
-        <g id="circle_3" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans3" style="cursor:pointer">
-          <a href="#partner">
-            <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="18.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="6 6"
-            />
-            <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Partner`}}</text>
-          </a>
-        </g>
-        <g id="circle_4" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans4" style="cursor:pointer">
-          <a href="#roadMap">
-          <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="18.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="6 6"
-            />
-            <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Road Map`}}</text>
-          </a>
-        </g>
-        <g id="circle_5" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans5" style='cursor:pointer'>
-          <a href="#contact">
-          <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="13.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="4 4"
-            />
-            <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="6"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Contact`}}</text>
-          </a>
-        </g> 
-      </g>
-    </svg>  
-   
+            </g>
+            <g id="ring-2" :transform="rotationRing3">>
+              <circle
+                id="Ellipse 20"
+                cx="0"
+                cy="0"
+                r="353.5"
+                stroke="black"
+                stroke-dasharray="4 4"
+              />
+            </g>
+            
+            <!-- <g id="logo" transform="translate(-673, -673)">
+              <image v-show="!raw" style="cursor:pointer"
+              x="440"
+              y="440"
+            href="trigan_logo_animation.svg"
+            alt="triangle with all three sides equal"
+            height="35%"
+            width="35%" />
+            </g> -->
+            <g id="circle_1" @mouseleave="hoverRing1= false" :transform="trans1" @mouseover="hoverRing1= true" style="cursor:pointer; z-index:12">
+              <a href="#about">
+                <circle
+                    class="dot2"
+                    id="Ellipse 28"
+                    cx="0"
+                    cy="0"
+                    r="25.5"
+                    fill="#E4DACD"
+                    stroke="black"
+                    stroke-dasharray="8 8"
+                  />
+                <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="13"/> 
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .About Us`}}</text>
+              </a>
+            </g>
+            <g id="circle_2" @mouseleave="hoverRing1= false" @mouseover="hoverRing1= true" :transform="trans2" style="cursor:pointer">
+              <a href="#project">
+                <circle
+                  class="dot2"
+                  id="Ellipse 28"
+                  cx="0"
+                  cy="0"
+                  r="25.5"
+                  fill="#E4DACD"
+                  stroke="black"
+                  stroke-dasharray="8 8"
+                />
+                <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="13"/> 
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Project`}}</text>
+              </a>
+            </g>
+            <g id="circle_3" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans3" style="cursor:pointer">
+              <a href="#partner">
+                <circle
+                  class="dot2"
+                  id="Ellipse 28"
+                  cx="0"
+                  cy="0"
+                  r="18.5"
+                  fill="#E4DACD"
+                  stroke="black"
+                  stroke-dasharray="6 6"
+                />
+                <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="9"/> 
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Partner`}}</text>
+              </a>
+            </g>
+            <g id="circle_4" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans4" style="cursor:pointer">
+              <a href="#roadMap">
+              <circle
+                  class="dot2"
+                  id="Ellipse 28"
+                  cx="0"
+                  cy="0"
+                  r="18.5"
+                  fill="#E4DACD"
+                  stroke="black"
+                  stroke-dasharray="6 6"
+                />
+                <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="9"/> 
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Road Map`}}</text>
+              </a>
+            </g>
+            <g id="circle_5" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans5" style='cursor:pointer'>
+              <a href="#contact">
+              <circle
+                  class="dot2"
+                  id="Ellipse 28"
+                  cx="0"
+                  cy="0"
+                  r="13.5"
+                  fill="#E4DACD"
+                  stroke="black"
+                  stroke-dasharray="4 4"
+                />
+                <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="6"/> 
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Contact`}}</text>
+              </a>
+            </g> 
+          </g>
+        </svg>
+      </div>  
+  </div>
+    
+    
   </div>
 </template>
 
 <script> 
+import logoAnimate from '@/components/common/logo-animate.vue'
 export default {
+  components:{ logoAnimate },
   name: 'logo-medium',
   props:{ 
   },
@@ -209,7 +246,9 @@ export default {
 #hero.logo{
   // position: inherit;
   // transform: inherit; 
-
+  svg{
+    z-index: 50;
+  }
 
   #ring-3:hover{
       animation-play-state: paused !important;
@@ -237,5 +276,16 @@ export default {
     // transform: translate(-50%, -50%);
     z-index: 2;
   }
+}
+
+#animate{
+
+  height: 36.3%;
+  width: 36.3%;
+  position: absolute;
+  left: 82%;
+  margin-left: -50%;
+  top: 82%;
+  margin-top: -50%;
 }
 </style>
