@@ -99,7 +99,7 @@
                   stroke-dasharray="6 6"
                 />
                 <circle class="dot" style="fill:black" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Partner`}}</text>
+                <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .Team`}}</text>
               </a>
             </g>
             <g id="circle_4" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans4" style="cursor:pointer">
