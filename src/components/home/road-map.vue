@@ -3,12 +3,10 @@
     <logo-road-map @data="changeData" class="mb-10" alt="" />
     <div class="container mx-auto">
       <div class="overflow-hidden w-full relative">
-        <swiper ref="mySwiper" :options="settings">
+        <swiper class="swiper-no-swiping" ref="mySwiper" :options="settings">
           <template v-for="(item, idx) in roadMap">
-            <swiper-slide :key="idx" class="">
-              <div
-                class="flex px-16 gap-5 justify-evenly items-center flex-wrap"
-              >
+            <swiper-slide :key="idx" class="max-h-0 duration-700 cursor-default" ref="targetHover">
+              <div class="flex px-16 gap-5 justify-evenly items-center flex-wrap">
                 <div v-for="(stage, idx) in item.stages" :key="idx">
                   <h3 class="text-3xl font-semibold uppercase mb-4 text-center">
                     {{ stage.title }}
@@ -27,22 +25,6 @@
               </div>
             </swiper-slide>
           </template>
-          <div
-            class="swiper-button-prev"
-            slot="button-prev"
-            @click="$refs.mySwiperRef.$swiper.slidePrev()"
-            v-if="settings && settings.navigation"
-          >
-            <img src="@/assets/svg/left_arrow.svg" alt="" />
-          </div>
-          <div
-            class="swiper-button-next"
-            slot="button-next"
-            @click="$refs.mySwiperRef.$swiper.slideNext()"
-            v-if="settings && settings.navigation"
-          >
-            <img src="@/assets/svg/right_arrow.svg" alt="" />
-          </div>
         </swiper>
       </div>
     </div>
@@ -57,14 +39,11 @@ export default {
   data() {
     return {
       mInfo: false,
+      mDate: null,
+      mActive: null,
       settings: {
         slidesPerView: 1,
         freeMode: false,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-
         loop: true,
       },
       roadMap: [
@@ -183,14 +162,13 @@ export default {
       if (mountTrue.readyState === XMLHttpRequest.DONE) {
         // eslint-disable-next-line no-unused-vars
         let response = JSON.parse(mountTrue.response);
-        console.log(response);
         info.roadMap[0].stages = response.Data;
       }
     };
   },
   methods: {
     changeData(value) {
-      console.log(value);
+      this.$refs.mySwiper.$swiper.slideTo(value, 1, false); // 1ms
     },
   },
 };

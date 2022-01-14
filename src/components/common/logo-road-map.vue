@@ -23,10 +23,10 @@
             transform="matrix(0.999971, 0.007635, 0, 1.000029, 0.020478, -5.363129)"
           />
           <g
-            id="dot1"
-            @click.prevent="$emit('data', 1)"
-            @mouseleave="round1 = 33.5"
-            @mouseover="round1 = 40"
+            id="dot1" data-target="1"
+            @click="(new Date() - $parent.mDate) > 700 ? targetHover(!$parent.mInfo, 1)  : ''" 
+            @mouseleave="round1 = 33.5; targetHover(false, 1)"
+            @mouseover="round1 = 40; targetHover(true, 1)"
           >
             <circle
               cx="733"
@@ -46,10 +46,10 @@
             />
           </g>
           <g
-            id="dot2"
-            @click.prevent="$emit('data', 2)"
-            @mouseleave="round2 = 25.5"
-            @mouseover="round2 = 33"
+            id="dot2" data-target="2"
+            @click="(new Date() - $parent.mDate) > 700 ? targetHover(!$parent.mInfo, 2)  : ''" 
+            @mouseleave="round2 = 25.5; targetHover(false, 2)"
+            @mouseover="round2 = 33; ; targetHover(true, 2)"
           >
             <circle
               cx="388"
@@ -69,10 +69,10 @@
             />
           </g>
           <g
-            id="dot3"
-            @click.prevent="$emit('data', 3)"
-            @mouseleave="round3 = 25.5"
-            @mouseover="round3 = 33"
+            id="dot3" data-target="3"
+            @click="(new Date() - $parent.mDate) > 700 ? targetHover(!$parent.mInfo, 3)  : ''" 
+            @mouseleave="round3 = 25.5; targetHover(false, 3)"
+            @mouseover="round3 = 33; targetHover(true, 3)"
           >
             <circle
               cx="1052.7"
@@ -106,12 +106,36 @@
 export default {
   data() {
     return {
+      noLoop: false,
       round1: 33.5,
       round2: 25.5,
       round3: 25.5,
     };
   },
-  methods: {},
+  methods: {
+    targetHover(e, v){
+      var el = this.$parent.$refs.targetHover[v-1].$el;
+      if(e){
+        if(!this.noLoop){
+          this.noLoop = true;
+          this.$parent.mDate = new Date()
+          this.$emit('data', v);
+          this.$parent.mInfo = true
+          this.$parent.mActive = v
+          setTimeout(function(){
+            el.style.display = 'block'
+            el.style.maxHeight = el.scrollHeight+'px'
+          }, 10);
+        }
+      }else{
+        this.noLoop = false
+        this.$parent.mDate = false
+        this.$parent.mInfo = false
+        this.$parent.mActive = null
+        el.style.maxHeight = '0px'
+      }
+    }
+  },
   created() {},
 };
 </script>
