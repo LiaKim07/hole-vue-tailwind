@@ -13,7 +13,7 @@
             id="Ellipse 22"
             cx="0"
             cy="0"
-            r="550"
+            r="650"
             stroke="black"
             stroke-dasharray="8"
           />
@@ -23,7 +23,7 @@
             id="Ellipse 23"
             cx="0"
             cy="0"
-            r="437.5"
+            r="500.5"
             stroke="black"
             stroke-dasharray="6"
           />
@@ -83,7 +83,7 @@
               stroke-dasharray="8 8"
             />
             <circle class="dot" :style="projectJSON[0].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[0].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[0].name}`}}</text>
         </g>
         <g id="circle_2" @mouseleave="hoverRing1= false" @mouseover="hoverRing1= true" :transform="trans2" @click="showDetail(projectJSON[1])" :style="projectJSON[1].description ? 'cursor:pointer' : ''">
           <circle
@@ -97,7 +97,7 @@
               stroke-dasharray="8 8"
             />
             <circle class="dot" :style="projectJSON[1].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[1].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[1].name}`}}</text>
         </g>
         <g id="circle_3" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans3" @click="showDetail(projectJSON[2])" :style="projectJSON[2].description ? 'cursor:pointer' : ''">
           <circle
@@ -111,7 +111,7 @@
               stroke-dasharray="6 6"
             />
             <circle class="dot" :style="projectJSON[2].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[2].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[2].name}`}}</text>
         </g>
         <g id="circle_4" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans4" @click="showDetail(projectJSON[3])" :style="projectJSON[3].description ? 'cursor:pointer' : ''">
           <circle
@@ -125,7 +125,7 @@
               stroke-dasharray="6 6"
             />
             <circle class="dot" :style="projectJSON[3].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[3].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[3].name}`}}</text>
         </g>
         <g id="circle_5" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans5" @click="showDetail(projectJSON[4])" :style="projectJSON[4].description ? 'cursor:pointer' : ''">
           <circle
@@ -139,7 +139,7 @@
               stroke-dasharray="4 4"
             />
             <circle class="dot" :style="projectJSON[4].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="6"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[4].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[4].name}`}}</text>
         </g>
         <g id="circle_6" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans6" @click="showDetail(projectJSON[5])" :style="projectJSON[5].description ? 'cursor:pointer' : ''">
           <circle
@@ -153,7 +153,7 @@
               stroke-dasharray="4 4"
             />
             <circle class="dot" :style="projectJSON[5].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="6"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.           .${projectJSON[5].name}`}}</text>
+            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[5].name}`}}</text>
         </g>
       </g>
     </svg>  
@@ -207,15 +207,15 @@ export default {
     doAnim(){ 
         if (!this.hoverRing1){
           this.rotationRing1 = "rotate(" + this.currentTheta + ")";
-          this.trans1 = "translate(" +Math.cos((this.currentTheta-15)*Math.PI/180)*554 + "," + Math.sin((this.currentTheta-15)*Math.PI/180)*554+")";
-          this.trans2 = "translate(" +Math.cos((this.currentTheta+165)*Math.PI/180)*554 + "," + Math.sin((this.currentTheta+165)*Math.PI/180)*554+")";
+          this.trans1 = "translate(" +Math.cos((this.currentTheta-15)*Math.PI/180)*651 + "," + Math.sin((this.currentTheta-15)*Math.PI/180)*651+")";
+          this.trans2 = "translate(" +Math.cos((this.currentTheta+165)*Math.PI/180)*651 + "," + Math.sin((this.currentTheta+165)*Math.PI/180)*651+")";
           this.currentTheta += this.thetaDelta;
         }
 
         if (!this.hoverRing2){
           this.rotationRing2 = "rotate(" + this.currentTheta2 + ")";
-          this.trans3 = "translate(" +Math.cos((this.currentTheta2-100)*Math.PI/180)*441 + "," + Math.sin((this.currentTheta2-100)*Math.PI/180)*441+")";
-          this.trans4 = "translate(" +Math.cos((this.currentTheta2+85)*Math.PI/180)*441 + "," + Math.sin((this.currentTheta2+85)*Math.PI/180)*441+")";
+          this.trans3 = "translate(" +Math.cos((this.currentTheta2-100)*Math.PI/180)*501 + "," + Math.sin((this.currentTheta2-100)*Math.PI/180)*501+")";
+          this.trans4 = "translate(" +Math.cos((this.currentTheta2+85)*Math.PI/180)*501 + "," + Math.sin((this.currentTheta2+85)*Math.PI/180)*501+")";
           this.currentTheta2 -= this.thetaDelta;
         }
 

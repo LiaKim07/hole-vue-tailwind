@@ -15,10 +15,17 @@
     <!-- <img src="@/assets/svg/circle_1.svg" class="" alt="" />
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
-    <img src="@/assets/svg/logo.svg" alt="" /> --> 
-    <div class="flex w-full h-full items-center md:w-5/12">
-      <logo-big/> 
+    <img src="@/assets/svg/logo.svg" alt="" /> -->
+    <div class="flex w-full h-full items-center md:w-1/2 mr-96 mt-40">
+      <logo-big />
     </div>
+    <iframe
+      width="600"
+      height="400"
+      class="absolute top-32 left-1/2"
+      src="https://www.youtube.com/embed/ewQO72rKlIw"
+    >
+    </iframe>
     <div class="relative">
       <button
         class="
