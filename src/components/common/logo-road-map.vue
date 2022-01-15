@@ -114,25 +114,27 @@ export default {
   },
   methods: {
     targetHover(e, v){
-      var el = this.$parent.$refs.targetHover[v-1].$el;
-      if(e){
-        if(!this.noLoop){
-          this.noLoop = true;
-          this.$parent.mDate = new Date()
-          this.$emit('data', v);
-          this.$parent.mInfo = true
-          this.$parent.mActive = v
-          setTimeout(function(){
-            el.style.display = 'block'
-            el.style.maxHeight = el.scrollHeight+'px'
-          }, 10);
+      if(this.$parent.$refs.targetHover.length >= v){
+        var el = this.$parent.$refs.targetHover[v-1];
+        if(e){
+          if(!this.noLoop){
+            this.noLoop = true;
+            this.$parent.mDate = new Date()
+            this.$emit('data', v);
+            this.$parent.mInfo = true
+            this.$parent.mActive = v
+            setTimeout(function(){
+              el.style.display = 'block'
+              el.style.maxHeight = el.scrollHeight+'px'
+            }, 10);
+          }
+        }else{
+          this.noLoop = false
+          this.$parent.mDate = false
+          this.$parent.mInfo = false
+          this.$parent.mActive = null
+          el.style.maxHeight = '0px'
         }
-      }else{
-        this.noLoop = false
-        this.$parent.mDate = false
-        this.$parent.mInfo = false
-        this.$parent.mActive = null
-        el.style.maxHeight = '0px'
       }
     }
   },

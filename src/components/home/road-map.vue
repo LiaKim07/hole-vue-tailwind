@@ -5,21 +5,23 @@
       <div class="overflow-hidden w-full relative">
         <swiper class="swiper-no-swiping" ref="mySwiper" :options="settings">
           <template v-for="(item, idx) in roadMap">
-            <swiper-slide :key="idx" class="max-h-0 duration-700 cursor-default" ref="targetHover">
-              <div class="flex px-16 gap-5 justify-evenly items-center flex-wrap">
-                <div v-for="(stage, idx) in item.stages" :key="idx">
-                  <h3 class="text-3xl font-semibold uppercase mb-4 text-center">
-                    {{ stage.title }}
-                  </h3>
-                  <p>
-                    {{ stage.description }}
-                  </p>
-                </div>
-                <div class="w-full text-center mt-2">
-                  <div
-                    class="inline-block border border-dashed border-color-dark rounded-2xl text-4xl px-4 pt-1 pb-2 mx-auto"
-                  >
-                    {{ item.daysLeft }} Days off
+            <swiper-slide :key="idx">
+              <div class="max-h-0 duration-500" ref="targetHover">
+                <div class="flex px-16 gap-5 justify-evenly items-center flex-wrap">
+                  <div v-for="(stage, idx) in item.stages" :key="idx">
+                    <h3 class="text-3xl font-semibold uppercase mb-4 text-center">
+                      {{ stage.title }}
+                    </h3>
+                    <p>
+                      {{ stage.description }}
+                    </p>
+                  </div>
+                  <div class="w-full text-center mt-2">
+                    <div
+                      class="inline-block border border-dashed border-color-dark rounded-2xl text-4xl px-4 pt-1 pb-2 mx-auto"
+                    >
+                      {{ item.daysLeft }} Days off
+                    </div>
                   </div>
                 </div>
               </div>
