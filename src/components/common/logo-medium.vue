@@ -7,7 +7,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g id="main-logo" transform="translate(673, 673)"> 
+      <g id="main-logo" transform="translate(673, 673)">
         <g id="ring-3" :transform="rotationRing1">
           <circle
             id="Ellipse 22"
@@ -28,7 +28,8 @@
             stroke-dasharray="6"
           />
         </g>
-        <g id="ring-2" :transform="rotationRing3">>
+        <g id="ring-2" :transform="rotationRing3">
+          >
           <circle
             id="Ellipse 20"
             cx="0"
@@ -38,7 +39,7 @@
             stroke-dasharray="4 4"
           />
         </g>
-        
+
         <g id="logo" transform="translate(-673, -673)">
           <circle id="Ellipse 19" cx="673" cy="673" r="237" fill="#272727" />
           <circle
@@ -71,163 +72,333 @@
             fill="#E4DACD"
           />
         </g>
-        <g id="circle_1" @mouseleave="hoverRing1= false" @mouseover="hoverRing1= true" :transform="trans1" @click="showDetail(projectJSON[0])" :style="projectJSON[0].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_1"
+          @mouseleave="hoverRing1 = false"
+          @mouseover="hoverRing1 = true"
+          :transform="trans1"
+          @click="showDetail(projectJSON[0])"
+          :style="projectJSON[0].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="25.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="8 8"
-            />
-            <circle class="dot" :style="projectJSON[0].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[0].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="25.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="8 8"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[0].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="13"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[0].name}` }}
+          </text>
         </g>
-        <g id="circle_2" @mouseleave="hoverRing1= false" @mouseover="hoverRing1= true" :transform="trans2" @click="showDetail(projectJSON[1])" :style="projectJSON[1].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_2"
+          @mouseleave="hoverRing1 = false"
+          @mouseover="hoverRing1 = true"
+          :transform="trans2"
+          @click="showDetail(projectJSON[1])"
+          :style="projectJSON[1].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="25.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="8 8"
-            />
-            <circle class="dot" :style="projectJSON[1].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="13"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[1].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="25.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="8 8"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[1].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="13"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[1].name}` }}
+          </text>
         </g>
-        <g id="circle_3" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans3" @click="showDetail(projectJSON[2])" :style="projectJSON[2].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_3"
+          @mouseleave="hoverRing2 = false"
+          @mouseover="hoverRing2 = true"
+          :transform="trans3"
+          @click="showDetail(projectJSON[2])"
+          :style="projectJSON[2].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="18.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="6 6"
-            />
-            <circle class="dot" :style="projectJSON[2].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[2].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="18.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="6 6"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[2].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="9"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[2].name}` }}
+          </text>
         </g>
-        <g id="circle_4" @mouseleave="hoverRing2= false" @mouseover="hoverRing2= true" :transform="trans4" @click="showDetail(projectJSON[3])" :style="projectJSON[3].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_4"
+          @mouseleave="hoverRing2 = false"
+          @mouseover="hoverRing2 = true"
+          :transform="trans4"
+          @click="showDetail(projectJSON[3])"
+          :style="projectJSON[3].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="18.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="6 6"
-            />
-            <circle class="dot" :style="projectJSON[3].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="9"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[3].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="18.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="6 6"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[3].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="9"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[3].name}` }}
+          </text>
         </g>
-        <g id="circle_5" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans5" @click="showDetail(projectJSON[4])" :style="projectJSON[4].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_5"
+          @mouseleave="hoverRing3 = false"
+          @mouseover="hoverRing3 = true"
+          :transform="trans5"
+          @click="showDetail(projectJSON[4])"
+          :style="projectJSON[4].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="13.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="4 4"
-            />
-            <circle class="dot" :style="projectJSON[4].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="6"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[4].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="13.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="4 4"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[4].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="6"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[4].name}` }}
+          </text>
         </g>
-        <g id="circle_6" @mouseleave="hoverRing3= false" @mouseover="hoverRing3= true" :transform="trans6" @click="showDetail(projectJSON[5])" :style="projectJSON[5].description ? 'cursor:pointer' : ''">
+        <g
+          id="circle_6"
+          @mouseleave="hoverRing3 = false"
+          @mouseover="hoverRing3 = true"
+          :transform="trans6"
+          @click.native="$refs.vueperslides2.goToSlide(5)"
+          :style="projectJSON[5].description ? 'cursor:pointer' : ''"
+        >
           <circle
-              class="dot2"
-              id="Ellipse 28"
-              cx="0"
-              cy="0"
-              r="13.5"
-              fill="#E4DACD"
-              stroke="black"
-              stroke-dasharray="4 4"
-            />
-            <circle class="dot" :style="projectJSON[5].description ? 'fill:black': 'fill:grey'" id="Ellipse 24" cx="0" cy="0" r="6"/> 
-            <text id="text1" font-size="1.5em" stroke="#272727" x="0" y="0" stroke-width="2px">{{`.${projectJSON[5].name}`}}</text>
+            class="dot2"
+            id="Ellipse 28"
+            cx="0"
+            cy="0"
+            r="13.5"
+            fill="#E4DACD"
+            stroke="black"
+            stroke-dasharray="4 4"
+          />
+          <circle
+            class="dot"
+            :style="projectJSON[5].description ? 'fill:black' : 'fill:grey'"
+            id="Ellipse 24"
+            cx="0"
+            cy="0"
+            r="6"
+          />
+          <text
+            id="text1"
+            font-size="1.5em"
+            stroke="#272727"
+            x="0"
+            y="0"
+            stroke-width="2px"
+          >
+            {{ `.${projectJSON[5].name}` }}
+          </text>
         </g>
       </g>
-    </svg>  
-   
+    </svg>
   </div>
 </template>
 
-<script> 
+<script>
 export default {
-  name: 'logo-medium',
-  props:{
-    projectJSON: Array
+  name: "logo-medium",
+  props: {
+    projectJSON: Array,
   },
-  data(){
+  data() {
     return {
       project: [],
-      trans1: 'translate(136.38475314139868,-35.77987018645747)',
-      trans2: 'translate(136.38475314139868,-35.77987018645747)',
-      trans3: 'translate(136.38475314139868,-35.77987018645747)',
-      trans4: 'translate(136.38475314139868,-35.77987018645747)',
-      trans5: 'translate(136.38475314139868,-35.77987018645747)',
-      trans6: 'translate(136.38475314139868,-35.77987018645747)',
-      rotationRing1: 'rotate(90)',
-      rotationRing2: 'rotate(90)',
-      rotationRing3: 'rotate(90)',
-      initialTheta : 0, // The initial rotation angle, in degrees.
-      currentTheta : 0,
-      currentTheta2 : 0,
-      currentTheta3 : 0,
-      thetaDelta:0.2,// The amount to rotate the square about every 16.7 milliseconds, in degrees.
-      angularLimit : 180,
+      trans1: "translate(136.38475314139868,-35.77987018645747)",
+      trans2: "translate(136.38475314139868,-35.77987018645747)",
+      trans3: "translate(136.38475314139868,-35.77987018645747)",
+      trans4: "translate(136.38475314139868,-35.77987018645747)",
+      trans5: "translate(136.38475314139868,-35.77987018645747)",
+      trans6: "translate(136.38475314139868,-35.77987018645747)",
+      rotationRing1: "rotate(90)",
+      rotationRing2: "rotate(90)",
+      rotationRing3: "rotate(90)",
+      initialTheta: 0, // The initial rotation angle, in degrees.
+      currentTheta: 0,
+      currentTheta2: 0,
+      currentTheta3: 0,
+      thetaDelta: 0.2, // The amount to rotate the square about every 16.7 milliseconds, in degrees.
+      angularLimit: 180,
       hoverRing1: false,
       hoverRing2: false,
       hoverRing3: false,
-    }
+    };
   },
-  methods:{
-    showDetail(project){
-      if(project && project.description){
-        this.$emit('show-detail', project);
+  methods: {
+    showDetail(project) {
+      if (project && project.description) {
+        this.$emit("show-detail", project);
         this.project = project;
       }
     },
-    animated(){
-      this.$nextTick(()=>{
-        setInterval(()=>{
-            requestAnimationFrame(() => { this.doAnim(); });
-        },10) 
-      }); 
+    animated() {
+      this.$nextTick(() => {
+        setInterval(() => {
+          requestAnimationFrame(() => {
+            this.doAnim();
+          });
+        }, 10);
+      });
     },
-    doAnim(){ 
-        if (!this.hoverRing1){
-          this.rotationRing1 = "rotate(" + this.currentTheta + ")";
-          this.trans1 = "translate(" +Math.cos((this.currentTheta-15)*Math.PI/180)*651 + "," + Math.sin((this.currentTheta-15)*Math.PI/180)*651+")";
-          this.trans2 = "translate(" +Math.cos((this.currentTheta+165)*Math.PI/180)*651 + "," + Math.sin((this.currentTheta+165)*Math.PI/180)*651+")";
-          this.currentTheta += this.thetaDelta;
-        }
+    doAnim() {
+      if (!this.hoverRing1) {
+        this.rotationRing1 = "rotate(" + this.currentTheta + ")";
+        this.trans1 =
+          "translate(" +
+          Math.cos(((this.currentTheta - 15) * Math.PI) / 180) * 651 +
+          "," +
+          Math.sin(((this.currentTheta - 15) * Math.PI) / 180) * 651 +
+          ")";
+        this.trans2 =
+          "translate(" +
+          Math.cos(((this.currentTheta + 165) * Math.PI) / 180) * 651 +
+          "," +
+          Math.sin(((this.currentTheta + 165) * Math.PI) / 180) * 651 +
+          ")";
+        this.currentTheta += this.thetaDelta;
+      }
 
-        if (!this.hoverRing2){
-          this.rotationRing2 = "rotate(" + this.currentTheta2 + ")";
-          this.trans3 = "translate(" +Math.cos((this.currentTheta2-100)*Math.PI/180)*501 + "," + Math.sin((this.currentTheta2-100)*Math.PI/180)*501+")";
-          this.trans4 = "translate(" +Math.cos((this.currentTheta2+85)*Math.PI/180)*501 + "," + Math.sin((this.currentTheta2+85)*Math.PI/180)*501+")";
-          this.currentTheta2 -= this.thetaDelta;
-        }
+      if (!this.hoverRing2) {
+        this.rotationRing2 = "rotate(" + this.currentTheta2 + ")";
+        this.trans3 =
+          "translate(" +
+          Math.cos(((this.currentTheta2 - 100) * Math.PI) / 180) * 501 +
+          "," +
+          Math.sin(((this.currentTheta2 - 100) * Math.PI) / 180) * 501 +
+          ")";
+        this.trans4 =
+          "translate(" +
+          Math.cos(((this.currentTheta2 + 85) * Math.PI) / 180) * 501 +
+          "," +
+          Math.sin(((this.currentTheta2 + 85) * Math.PI) / 180) * 501 +
+          ")";
+        this.currentTheta2 -= this.thetaDelta;
+      }
 
-        if (!this.hoverRing3){
-          this.rotationRing3 = "rotate(" + this.currentTheta3 + ")";
-          this.trans5 = "translate(" +Math.cos((this.currentTheta3-100)*Math.PI/180)*351 + "," + Math.sin((this.currentTheta3-100)*Math.PI/180)*351+")";
-          this.trans6 = "translate(" +Math.cos((this.currentTheta3+85)*Math.PI/180)*351 + "," + Math.sin((this.currentTheta3+85)*Math.PI/180)*351+")";
-          this.currentTheta3 += this.thetaDelta;
-        } 
-    }
+      if (!this.hoverRing3) {
+        this.rotationRing3 = "rotate(" + this.currentTheta3 + ")";
+        this.trans5 =
+          "translate(" +
+          Math.cos(((this.currentTheta3 - 100) * Math.PI) / 180) * 351 +
+          "," +
+          Math.sin(((this.currentTheta3 - 100) * Math.PI) / 180) * 351 +
+          ")";
+        this.trans6 =
+          "translate(" +
+          Math.cos(((this.currentTheta3 + 85) * Math.PI) / 180) * 351 +
+          "," +
+          Math.sin(((this.currentTheta3 + 85) * Math.PI) / 180) * 351 +
+          ")";
+        this.currentTheta3 += this.thetaDelta;
+      }
+    },
   },
-  created(){
+  created() {
+    // console.log(props);
     this.animated();
     this.project = this.projectJSON[0];
   },
@@ -235,31 +406,28 @@ export default {
 </script>
 
 <style lang="scss">
-#project.logo2{
+#project.logo2 {
   position: inherit;
-  transform: inherit; 
+  transform: inherit;
 }
 
-#ring-3:hover{
-    animation-play-state: paused !important;
+#ring-3:hover {
+  animation-play-state: paused !important;
 }
 
-
-#ring-2:hover{
-    animation-play-state: paused !important;
+#ring-2:hover {
+  animation-play-state: paused !important;
 }
 
-
-#ring-1:hover{
-    animation-play-state: paused !important;
+#ring-1:hover {
+  animation-play-state: paused !important;
 }
 
-.dot{
-  fill:grey;
+.dot {
+  fill: grey;
 }
 
-
-.logo2 { 
+.logo2 {
   top: 50%;
   left: 50%;
   width: 100%;

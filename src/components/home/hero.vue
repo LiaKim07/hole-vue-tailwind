@@ -7,7 +7,6 @@
       flex
       py-6
       justify-end
-      items-center
       flex-col
       align-bottom
     "
@@ -16,17 +15,17 @@
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
     <img src="@/assets/svg/logo.svg" alt="" /> -->
-    <div class="flex w-full h-full items-center md:w-1/2 mr-96 mt-40">
+    <div class="flex w-full h-full items-center md:w-1/2 ml-20 mt-40">
       <logo-big />
     </div>
     <iframe
-      width="600"
-      height="400"
+      width="40%"
+      height="45%"
       class="absolute top-32 left-1/2"
       src="https://www.youtube.com/embed/ewQO72rKlIw"
     >
     </iframe>
-    <div class="relative">
+    <div class="relative text-center">
       <button
         class="
           inline-block
