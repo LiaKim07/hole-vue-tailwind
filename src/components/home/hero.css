@@ -1,0 +1,12 @@
+.iframe-youtube {
+    width: 42%;
+    height: 45%;
+}
+
+@media (max-width: 400px) {
+    .iframe-youtube {
+        width: 100%;
+        top: 100px;
+        left: 0%;
+    }
+}

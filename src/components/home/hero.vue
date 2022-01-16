@@ -15,13 +15,12 @@
     <img src="@/assets/svg/circle_2.svg" alt="" />
     <img src="@/assets/svg/circle_3.svg" alt="" />
     <img src="@/assets/svg/logo.svg" alt="" /> -->
-    <div class="flex w-full h-full items-center md:w-1/2 ml-20 mt-40">
+    <div class="flex w-full h-full items-center md:w-1/2 md:ml-20 lg:ml-20 lg:mt-40 md:mt-40">
       <logo-big />
     </div>
     <iframe
-      width="40%"
       height="45%"
-      class="absolute top-32 left-1/2"
+      class="absolute lg:top-32 md:top-32 sm:top-1/2 md:w-iframe-video-width lg:w-iframe-video-width sm:left-0 lg:left-1/2 md:left-1/2 sm:w-full"
       src="https://www.youtube.com/embed/ewQO72rKlIw"
     >
     </iframe>
